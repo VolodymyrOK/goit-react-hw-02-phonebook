@@ -41,7 +41,16 @@ export const ContactsList = ({
   );
 };
 
-Filter.propTypes = {
+ContactsList.propTypes = {
+  title: PropTypes.string,
   onFilterElement: PropTypes.func,
   filter: PropTypes.string,
+  contacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string,
+      number: PropTypes.string,
+    })
+  ),
+  onDelContact: PropTypes.func,
 };

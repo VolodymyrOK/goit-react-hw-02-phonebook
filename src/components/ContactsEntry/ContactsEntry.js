@@ -1,5 +1,6 @@
 import { Formik } from 'formik';
 import * as Yup from 'yup';
+import PropTypes from 'prop-types';
 
 import {
   Label,
@@ -67,4 +68,10 @@ export const ContactsEntry = ({ title, state, onAdd }) => {
       </Formik>
     </>
   );
+};
+
+ContactsEntry.propTypes = {
+  title: PropTypes.string,
+  state: PropTypes.object,
+  onAdd: PropTypes.func,
 };
